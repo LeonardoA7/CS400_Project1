@@ -29,7 +29,10 @@ class Frontend{
 
 	public boolean testing = false; //Used to not clear the screen when testing
 
-	public void main(String[] args){
+	public static void main(String[] args){
+	}
+
+	public void run(String[] args){
 		//Initialize
 		mode = Mode.base;
 		scnr = new Scanner(System.in);
