@@ -30,13 +30,18 @@ class Frontend{
 	public boolean testing = false; //Used to not clear the screen when testing
 
 	public static void main(String[] args){
+		
 	}
 
-	public void run(String[] args){
+	public void run(Backend back){
 		//Initialize
 		mode = Mode.base;
 		scnr = new Scanner(System.in);
-		backend = new Backend();
+		if(back != null){
+			backend = back;
+		}else{
+			backend = new Backend(); //This will have to be changed to add constructor args when backend is implimented
+		}
 		selectedRatings = new boolean[]{true, true, true, true, true, true, true, true, true, true, true};
 		selectionScroll = -1;
 
